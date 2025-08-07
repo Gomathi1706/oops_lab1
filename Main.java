@@ -15,7 +15,7 @@ public class Main {
         b1.author = "James Gosling";
 
         Book b2 = new Book();
-        b2.title = "Clean Code";
+        b2.title = "Clean Code"; 
         b2.author = "Robert C. Martin";
 
         System.out.println("Book 1:");
