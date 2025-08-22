@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Book {
     String title;
     String author;
@@ -10,18 +12,29 @@ class Book {
 
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // First book
         Book b1 = new Book();
-        b1.title = "Java Programming";
-        b1.author = "James Gosling";
+        System.out.print("Enter title of Book 1: ");
+        b1.title = sc.nextLine();
+        System.out.print("Enter author of Book 1: ");
+        b1.author = sc.nextLine();
 
+        // Second book
         Book b2 = new Book();
-        b2.title = "Clean Code"; 
-        b2.author = "Robert C. Martin";
+        System.out.print("Enter title of Book 2: ");
+        b2.title = sc.nextLine();
+        System.out.print("Enter author of Book 2: ");
+        b2.author = sc.nextLine();
 
-        System.out.println("Book 1:");
+        // Display results
+        System.out.println("\nBook 1:");
         b1.displayBook();
 
         System.out.println("\nBook 2:");
         b2.displayBook();
+
+        sc.close();
     }
 }
